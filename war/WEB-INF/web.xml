@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>P1</servlet-name>
+		<servlet-class>com.enjava.P1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>P1</servlet-name>
+		<url-pattern>/p1</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>P2</servlet-name>
+		<servlet-class>com.enjava.P2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>P2</servlet-name>
+		<url-pattern>/p2</url-pattern>
+	</servlet-mapping>
+	
+ <filter>
+    <filter-name>filtroSes</filter-name>
+    <filter-class>com.enjava.FiltroSes</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>filtroSes</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+  </filter-mapping>
+	 <listener>
+    <listener-class>com.enjava.ListenerContexto</listener-class>
+  </listener>
+	 <listener>
+    <listener-class>com.enjava.ListenerSession</listener-class>
+  </listener>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
