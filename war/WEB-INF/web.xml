@@ -20,6 +20,22 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>P2</servlet-name>
 		<url-pattern>/p2</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>P3</servlet-name>
+		<servlet-class>com.enjava.P3Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>P3</servlet-name>
+		<url-pattern>/p3</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>disconect</servlet-name>
+		<servlet-class>com.enjava.DisconectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>disconect</servlet-name>
+		<url-pattern>/disconect</url-pattern>
+	</servlet-mapping>
 	
  <filter>
     <filter-name>filtroSes</filter-name>

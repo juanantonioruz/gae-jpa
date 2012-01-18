@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<project default="main" basedir=".">
+	<property name="appengine" location="${basedir}/war/WEB-INF/appengine-web.xml" />
+
+
+	<target name="main">
+		<echo message="REINICIANDO SERVIDOR LOCAL ${appengine}" />
+		<touch file="${appengine}" />
+	</target>
+
+</project>

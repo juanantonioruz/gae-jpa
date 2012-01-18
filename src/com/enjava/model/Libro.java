@@ -54,7 +54,7 @@ public class Libro {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	public Editorial getEditorial() {
 		return editorial;
 	}

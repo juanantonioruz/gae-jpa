@@ -8,7 +8,7 @@ public class ListenerSession implements HttpSessionListener{
 	@Override
 	public void sessionCreated(HttpSessionEvent arg0) {
 		System.out.println("iniciando contador");
-		arg0.getSession().setAttribute("contador", new Integer(0));
+		arg0.getSession().setAttribute("contador", new Contador());
 		
 	}
 
