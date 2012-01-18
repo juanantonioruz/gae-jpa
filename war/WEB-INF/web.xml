@@ -36,7 +36,22 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>disconect</servlet-name>
 		<url-pattern>/disconect</url-pattern>
 	</servlet-mapping>
-	
+	<servlet>
+		<servlet-name>listadoCompradores</servlet-name>
+		<servlet-class>com.enjava.panaderia.servlets.ListadoCompradores</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listadoCompradores</servlet-name>
+		<url-pattern>/listadoCompradores</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>addComprador</servlet-name>
+		<servlet-class>com.enjava.panaderia.servlets.AddComprador</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addComprador</servlet-name>
+		<url-pattern>/addComprador</url-pattern>
+	</servlet-mapping>
  <filter>
     <filter-name>filtroSes</filter-name>
     <filter-class>com.enjava.FiltroSes</filter-class>
