@@ -45,12 +45,44 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/listadoCompradores</url-pattern>
 	</servlet-mapping>
 	<servlet>
+		<servlet-name>listadoProductos</servlet-name>
+		<servlet-class>com.enjava.panaderia.servlets.ListadoProductos</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listadoProductos</servlet-name>
+		<url-pattern>/listadoProductos</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>listadoPedidos</servlet-name>
+		<servlet-class>com.enjava.panaderia.servlets.ListadoPedidos</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listadoPedidos</servlet-name>
+		<url-pattern>/listadoPedidos</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>addComprador</servlet-name>
 		<servlet-class>com.enjava.panaderia.servlets.AddComprador</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>addComprador</servlet-name>
 		<url-pattern>/addComprador</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>addProducto</servlet-name>
+		<servlet-class>com.enjava.panaderia.servlets.AddProducto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addProducto</servlet-name>
+		<url-pattern>/addProducto</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>addPedido</servlet-name>
+		<servlet-class>com.enjava.panaderia.servlets.AddPedido</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addPedido</servlet-name>
+		<url-pattern>/addPedido</url-pattern>
 	</servlet-mapping>
  <filter>
     <filter-name>filtroSes</filter-name>

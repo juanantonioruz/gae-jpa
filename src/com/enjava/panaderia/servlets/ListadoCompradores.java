@@ -1,23 +1,28 @@
 package com.enjava.panaderia.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
 
 import com.enjava.dao.EMFService;
-import com.enjava.model.Editorial;
-import com.enjava.model.Libro;
 import com.enjava.panaderia.Comprador;
 
 @SuppressWarnings("serial")
 public class ListadoCompradores extends HttpServlet {
+	private static final Logger log = Logger.getLogger(ListadoCompradores.class.getName());
+
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		resp.setContentType("text/html");
+		log.info("dejando log!");
 		PrintWriter writer = resp.getWriter();
 
 		EntityManagerFactory entityManagerFactory = EMFService.get();

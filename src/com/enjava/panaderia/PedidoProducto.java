@@ -1,27 +1,24 @@
 package com.enjava.panaderia;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 import com.google.appengine.api.datastore.Key;
-
 @Entity
-public class Comprador {
-
+public class PedidoProducto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Key id;
 	
-	String nombre;
 
+
+	Key comprador;
+	Key producto;
+
+	
 	
 	public Key getId() {
 		return id;
@@ -31,15 +28,28 @@ public class Comprador {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public Key getComprador() {
+		return comprador;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setComprador(Key comprador) {
+		this.comprador = comprador;
+	}
+
+	public Key getProducto() {
+		return producto;
+	}
+
+	public void setProducto(Key producto) {
+		this.producto = producto;
 	}
 
 
+
+	
+
+	
+	
 	
 	
 }
