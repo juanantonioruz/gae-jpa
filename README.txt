@@ -1,0 +1,1 @@
+Basic project GAE-JPA ready for developing in eclipse IDE and for GAE deploying
